@@ -1,5 +1,3 @@
-import uuid
-
 import requests
 import streamlit as st
 from requests import RequestException
@@ -9,7 +7,7 @@ with st.sidebar:
                                     value="http://localhost:8080/api/chat")
     agent_info_url = st.text_input("Agent Info", key="agent_info_url", help="URL of agent info",
                                    value="http://localhost:8080/api/_agent/info")
-    memory_id = st.text_input("Memory Id", key="memory_id", value=uuid.uuid4(),
+    memory_id = st.text_input("Memory Id", key="memory_id",
                               help="Use a non-empty value to enable memories")
 
     try:
