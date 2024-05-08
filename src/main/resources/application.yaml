@@ -8,7 +8,7 @@ spring:
     dashscope:
       chat:
         options:
-          model: qwen-plus
+          model: qwen-max-0428
           temperature: 0.1
 io:
   github:
