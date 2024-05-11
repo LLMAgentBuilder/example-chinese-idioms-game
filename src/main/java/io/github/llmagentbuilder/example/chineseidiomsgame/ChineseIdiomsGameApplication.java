@@ -1,7 +1,7 @@
 package io.github.llmagentbuilder.example.chineseidiomsgame;
 
 import io.github.llmagentbuilder.spring.dev.AgentDevConfiguration;
-import io.github.llmagentbuilder.spring.spring.agentcontroller.AgentControllerConfiguration;
+import io.github.llmagentbuilder.spring.agentcontroller.AgentControllerConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;

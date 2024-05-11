@@ -2,6 +2,7 @@ package io.github.llmagentbuilder.example.chineseidiomsgame.tool
 
 import io.github.llmagentbuilder.core.tool.AgentTool
 import io.github.llmagentbuilder.core.tool.AgentToolFactory
+import org.apache.commons.lang3.StringUtils
 
 
 class ChineseIdiomsCheckTool :
@@ -11,11 +12,14 @@ class ChineseIdiomsCheckTool :
     }
 
     override fun description(): String {
-        return "check if a chinese idiom is valid"
+        return "check if a chinese idiom is valid with last chinese idiom"
     }
 
     override fun apply(request: IdiomCheckRequest): IdiomCheckResponse {
-        return IdiomCheckResponse(Idioms.isIdiom(request.word))
+        if (StringUtils.isNotEmpty(request.lastIdiom) && request.lastIdiom.last() != request.currentIdiom.first()) {
+            return IdiomCheckResponse(false)
+        }
+        return IdiomCheckResponse(Idioms.isIdiom(request.currentIdiom))
     }
 }
 
