@@ -4,11 +4,16 @@ import io.github.llmagentbuilder.core.tool.AgentTool
 import io.github.llmagentbuilder.core.tool.AgentToolFactory
 import org.apache.commons.lang3.StringUtils
 
+const val chineseIdiomsCheckToolId = "checkChineseIdiom"
 
 class ChineseIdiomsCheckTool :
     AgentTool<IdiomCheckRequest, IdiomCheckResponse> {
+    override fun id(): String {
+        return chineseIdiomsCheckToolId
+    }
+
     override fun name(): String {
-        return "checkChineseIdiom"
+        return chineseIdiomsCheckToolId
     }
 
     override fun description(): String {
@@ -29,11 +34,16 @@ class ChineseIdiomsCheckToolFactory : AgentToolFactory<ChineseIdiomsCheckTool> {
     }
 }
 
+const val getChineseIdiomsStartWithToolId = "getChineseIdiomsStartWith"
 
 class GetChineseIdiomsStartWithTool :
     AgentTool<GetChineseIdiomsStartWithRequest, GetChineseIdiomsStartWithResponse> {
+    override fun id(): String {
+        return getChineseIdiomsStartWithToolId
+    }
+
     override fun name(): String {
-        return "getChineseIdiomsStartWith"
+        return getChineseIdiomsStartWithToolId
     }
 
     override fun description(): String {
