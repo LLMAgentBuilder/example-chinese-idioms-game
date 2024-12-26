@@ -15,9 +15,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <kotlin.code.style>official</kotlin.code.style>
     <java.version>21</java.version>
-    <kotlin.version>1.9.23</kotlin.version>
+    <kotlin.version>2.1.0</kotlin.version>
     <kotlin.compiler.jvmTarget>21</kotlin.compiler.jvmTarget>
-    <llm-agent-builder.version>0.2.1</llm-agent-builder.version>
+    <llm-agent-builder.version>0.4.1</llm-agent-builder.version>
   </properties>
 
   <dependencies>
@@ -35,6 +35,11 @@
       <groupId>io.github.llmagentbuilder</groupId>
       <artifactId>llm-openai</artifactId>
       <version>${llm-agent-builder.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.llmagentbuilder</groupId>
+      <artifactId>chat-agent-ui</artifactId>
+      <version>0.4.0</version>
     </dependency>
   </dependencies>
 
